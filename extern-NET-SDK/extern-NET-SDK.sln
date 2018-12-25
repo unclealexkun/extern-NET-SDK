@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "extern-NET-SDK", "extern-NET-SDK\extern-NET-SDK.shproj", "{C31937B9-9012-4882-8E43-222CC80C46F9}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		extern-NET-SDK\extern-NET-SDK.projitems*{c31937b9-9012-4882-8e43-222cc80c46f9}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E8FC6699-292E-4832-AA26-9982A0161B5A}
+	EndGlobalSection
+EndGlobal
