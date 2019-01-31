@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace externScharpSDK
+namespace ExternScharpSDK
 {
 	public class ExternSDK
 	{
