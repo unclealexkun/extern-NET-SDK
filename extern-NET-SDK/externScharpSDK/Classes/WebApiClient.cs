@@ -25,7 +25,7 @@ namespace ExternScharpSDK.Classes
 			var apiUrl = new Uri(endpoint, string.Format("/auth/v5.9/authenticate-by-cert?free={0}&apiKey={1}", true, ""));
 			using (var client = new HttpClient())
 			{
-				HttpResponseMessage response = await client.PostAsync(apiUrl, new StringContent("", Encoding.UTF8));
+				var response = await client.PostAsync(apiUrl, new StringContent("", Encoding.UTF8));
 			}
 		}
 	}
