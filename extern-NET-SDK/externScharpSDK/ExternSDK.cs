@@ -4,9 +4,11 @@ namespace ExternScharpSDK
 {
 	public class ExternSDK
 	{
-		public ExternSDK(string baseUrl)
-		{
+		private string endpoint;
 
+		public ExternSDK(string endpoint)
+		{
+			this.endpoint = endpoint;
 		}
 	}
 }
