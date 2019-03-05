@@ -11,8 +11,12 @@ namespace RunnerExternSharpSDK
 	{
 		static void Main(string[] args)
 		{
-			var sdk = new ExternSDK("https://api.testkontur.ru");
-			Console.WriteLine(sdk.Test().Result);
+			var login = String.Empty;
+			var password = String.Empty;
+			var apiKey = String.Empty;
+
+			var sdk = new ExternSDK("https://api.testkontur.ru", login, password, apiKey);
+			Console.WriteLine();
 		}
 	}
 }
