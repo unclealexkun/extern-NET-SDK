@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -24,9 +25,15 @@ namespace ExternScharpSDK.Classes
 			WebApiClient.endpoint = endpoint;
 		}
 
-		public void GetToken(string login, string password, string apiKey)
+		public async Task<object> GetTokens (string login, string password, string apiKey)
 		{
-
+			using (var client = new HttpClient())
+			{
+				var response = await client.GetAsync(new Uri(endpoint, "Test"));
+				response.EnsureSuccessStatusCode();
+				var obj = await response.Content.ReadAsAsync<object>();
+				return obj;
+			}
 		}
 	}
 }

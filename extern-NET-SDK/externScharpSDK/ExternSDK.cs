@@ -15,7 +15,7 @@ namespace ExternScharpSDK
 
 		public void Authentications(string login, string password, string apiKey)
 		{
-
+			var t = client.GetTokens(login, password, apiKey);
 		}
 	}
 }
