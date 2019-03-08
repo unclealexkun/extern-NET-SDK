@@ -13,9 +13,9 @@ namespace ExternScharpSDK
 			client = new WebApiClient(endpoint);
 		}
 
-		public void Authentications(string login, string password, string apiKey)
+		public string Authenticate(string login, string password, string apiKey)
 		{
-			var t = client.GetTokens(login, password, apiKey);
+			return client.GetTokens(login, password, apiKey).Result;
 		}
 	}
 }
