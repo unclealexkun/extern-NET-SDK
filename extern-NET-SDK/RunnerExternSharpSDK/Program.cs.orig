@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ExternScharpSDK;
+
+namespace RunnerExternSharpSDK
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+<<<<<<< HEAD
+			var login = "";
+			var password = "";
+			var apiKey = "";
+
+			var sdk = new ExternSDK("https://extern-api.testkontur.ru/");
+			var t = sdk.Authentications(login, password, apiKey);
+			Console.WriteLine();
+=======
+			var login = args[0];
+			var password = args[1];
+			var apiKey = args[2];
+
+			var sdk = new ExternSDK("https://api.testkontur.ru");
+			var token = sdk.Authenticate(login, password, apiKey);
+			Console.WriteLine("token = "+token);
+>>>>>>> 1c311c511718c46bb5d4c9fd6045c8c70a1b5e15
+		}
+	}
+}
