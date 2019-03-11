@@ -25,13 +25,15 @@ namespace ExternScharpSDK.Classes
 			WebApiClient.endpoint = endpoint;
 		}
 
-		public async Task<object> GetTokens (string login, string password, string apiKey)
+		public async Task<string> GetTokens(string login, string password, string apiKey)
 		{
 			using (var client = new HttpClient())
 			{
-				var response = await client.GetAsync(new Uri(endpoint, "Test"));
+				client.DefaultRequestHeaders.Add("X-Kontur-Apikey", apiKey);
+				var response = await client.PostAsync(new Uri(endpoint, "/auth/v5.12/authenticate-by-pass?login="+login),
+					new StringContent(password));
 				response.EnsureSuccessStatusCode();
-				var obj = await response.Content.ReadAsAsync<object>();
+				var obj = await response.Content.ReadAsStringAsync();
 				return obj;
 			}
 		}
